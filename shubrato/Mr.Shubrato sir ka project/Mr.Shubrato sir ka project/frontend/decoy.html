@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background:#1c1c1e">
+  <!-- Neutral decoy screen shown after Quick Exit. A fully working calculator. -->
+  <main class="decoy" aria-label="Calculator">
+    <div class="decoy__display" id="display" role="status">0</div>
+    <div class="decoy__keys" id="keys">
+      <button class="fn" data-k="C">AC</button><button class="fn" data-k="neg">±</button><button class="fn" data-k="pct">%</button><button class="op" data-k="/">÷</button>
+      <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button><button class="op" data-k="*">×</button>
+      <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button><button class="op" data-k="-">−</button>
+      <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button><button class="op" data-k="+">+</button>
+      <button class="zero" data-k="0">0</button><button data-k=".">.</button><button class="op" data-k="=">=</button>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var cur = "0", prev = null, op = null, fresh = true;
+      var disp = document.getElementById("display");
+      function show() { disp.textContent = cur.length > 12 ? Number(cur).toPrecision(9) : cur; }
+      function calc(a, b, o) { a = parseFloat(a); b = parseFloat(b);
+        var r = o === "+" ? a + b : o === "-" ? a - b : o === "*" ? a * b : (b === 0 ? NaN : a / b);
+        return isFinite(r) ? String(+r.toFixed(10)) : "Error"; }
+      document.getElementById("keys").addEventListener("click", function (e) {
+        var k = e.target.dataset && e.target.dataset.k; if (!k) return;
+        if (/^\d$/.test(k)) { cur = (fresh || cur === "0" || cur === "Error") ? k : cur + k; fresh = false; }
+        else if (k === ".") { if (fresh) { cur = "0."; fresh = false; } else if (cur.indexOf(".") < 0) cur += "."; }
+        else if (k === "C") { cur = "0"; prev = null; op = null; fresh = true; }
+        else if (k === "neg") { cur = String(-parseFloat(cur) || 0); }
+        else if (k === "pct") { cur = String(parseFloat(cur) / 100); }
+        else if (k === "=") { if (op && prev !== null) { cur = calc(prev, cur, op); prev = null; op = null; fresh = true; } }
+        else { if (op && prev !== null && !fresh) cur = calc(prev, cur, op); prev = cur; op = k; fresh = true; }
+        show();
+      });
+    })();
+  </script>
+</body>
+</html>

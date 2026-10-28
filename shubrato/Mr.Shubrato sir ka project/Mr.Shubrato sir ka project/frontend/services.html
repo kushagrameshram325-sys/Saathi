@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f9ff">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SAATHI – Verified Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header__inner">
+      <div class="brand">
+        <div class="brand__logo"><span class="icon" aria-hidden="true">verified_user</span></div>
+        <div class="brand__text">
+          <span class="brand__name t-caps">SAATHI</span>
+          <span class="brand__page t-title">Services</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="pill-btn pill-btn--sos" href="tel:181" aria-label="Call 181 helpline">
+          <span class="icon icon--16" aria-hidden="true">emergency</span><span class="t-caps">181 SOS</span>
+        </a>
+        <button class="pill-btn pill-btn--exit" type="button" data-quick-exit title="Leave this site immediately (or press Esc 3 times)">
+          <span class="icon icon--16" aria-hidden="true">power_settings_new</span><span class="t-label">Quick Exit</span>
+        </button>
+        <div class="avatar" aria-hidden="true"><span class="icon icon--18">person</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main app-main--tight">
+
+    <div class="stack-xs pt-xs">
+      <div class="row row--between" style="align-items:flex-start">
+        <h1 class="t-headline">Verified Services Directory</h1>
+        <span class="badge t-caps shrink-0"><span class="icon icon--14 icon--fill" aria-hidden="true">verified</span>Audit: Q3 Active</span>
+      </div>
+      <p class="t-body muted">Connect anonymously with accredited trauma-informed medical, legal, crisis shelter, and emotional care teams.</p>
+    </div>
+
+    <!-- Search -->
+    <section class="card" aria-label="Search services">
+      <div class="search-box">
+        <span class="icon accent" aria-hidden="true">search</span>
+        <input id="directory-search" type="search" placeholder="Describe what you need in plain words..." autocomplete="off" aria-label="Search services">
+        <button class="icon-btn" type="button" id="mic-btn" aria-label="Search by voice"><span class="icon" aria-hidden="true">mic</span></button>
+      </div>
+      <div class="scroll-x">
+        <button class="chip chip--sm t-label" type="button" data-query="legal"><span class="icon icon--14" aria-hidden="true">gavel</span>Confidential legal advice</button>
+        <button class="chip chip--sm t-label" type="button" data-query="shelter"><span class="icon icon--14" aria-hidden="true">night_shelter</span>Safe temporary shelter</button>
+        <button class="chip chip--sm t-label" type="button" data-query="counselling"><span class="icon icon--14" aria-hidden="true">psychology</span>Trauma counselling</button>
+      </div>
+    </section>
+
+    <div class="card card--tint" style="flex-direction:row;align-items:flex-start">
+      <div class="icon-circle icon-circle--sm accent"><span class="icon icon--18 icon--fill" aria-hidden="true">shield_lock</span></div>
+      <div>
+        <span class="t-label-lg">Data Minimization Principle</span>
+        <p class="t-small muted">We do not log your identity or search queries. Service providers only receive details you voluntarily submit.</p>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="scroll-x" role="group" aria-label="Filter services" id="filters">
+      <button class="chip chip--white t-label" type="button" data-filter="all" aria-pressed="true">All Services</button>
+      <button class="chip chip--white t-label" type="button" data-filter="247" aria-pressed="false">24/7 Available</button>
+      <button class="chip chip--white t-label" type="button" data-filter="women" aria-pressed="false">Women-Led</button>
+      <button class="chip chip--white t-label" type="button" data-filter="free" aria-pressed="false">Free / Pro-Bono</button>
+    </div>
+
+    <p class="t-small muted" id="results-status" role="status" aria-live="polite" hidden></p>
+
+    <div class="stack-md" id="service-list">
+      <!-- Sakhi OSC -->
+      <article class="card card--flush service" data-tags="247 women free" data-search="sakhi one stop centre shelter police medical aid psycho-social support emergency beds central district">
+        <div class="media">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0DKAL41q6c2bMsxiG0kIJ0GZyga6OQmxcC-kGtGE1hMaouk9JPXHWePiXxjLoQZCBIPvlF1Q3YYhDJsSIROX_OtyVYGCTvc9IUMoNjzvyY2v3BXQuOt29PNvI7l0km0rTfg7IPvVFuG-tO1YHBP_kRCDRXwC0iQDSXmmfygZIeFkCK6E1FqlR6rT6X_CwTIwiKC4X-toJ-nrCKhWR_fwL55OohGK0_inzxerDHdai4TD3rUg-uPP" alt="Calm, well-lit community centre with greenery" loading="lazy" onerror="this.remove()">
+          <div class="media__shade"></div>
+          <span class="media__tl glass badge t-caps" style="color:var(--secondary)"><span class="icon icon--12 icon--fill" aria-hidden="true">check_circle</span>Govt Certified</span>
+          <span class="media__tr badge badge--solid t-caps">24/7 Open</span>
+          <div class="media__bl"><span class="t-caps" style="opacity:.9">Central District • 1.4 km away</span><span class="badge badge--fixed badge--square t-caps">Beds Available</span></div>
+        </div>
+        <div class="card__body">
+          <div>
+            <h2 class="t-title">Sakhi One Stop Centre (OSC) - Central District</h2>
+            <span class="t-caps subtle">Verified Yesterday | Confirmed Beds Available</span>
+          </div>
+          <div class="tag-list">
+            <span class="tag t-caps">Emergency shelter</span><span class="tag t-caps">Police liaison desk</span><span class="tag t-caps">Medical aid</span><span class="tag t-caps">Psycho-social support</span>
+            <span class="tag tag--strong t-caps"><span class="icon icon--12" aria-hidden="true">accessible</span>Wheelchair Accessible</span>
+            <span class="tag tag--strong t-caps"><span class="icon icon--12" aria-hidden="true">lock</span>Confidential</span>
+          </div>
+          <div class="stack-xs pt-xs">
+            <a class="btn btn--lg btn--container t-label-lg" href="tel:181"><span class="icon icon--18" aria-hidden="true">call</span>Confidential Call (Free)</a>
+            <button class="btn btn--soft t-label" type="button" data-action="route" data-name="Sakhi One Stop Centre, Central District"><span class="icon icon--18 accent" aria-hidden="true">directions_walk</span>View Details &amp; Walking Route</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Legal aid -->
+      <article class="card service" data-tags="free women" data-search="stree mukti legal aid cell advocates court dv act protection order pro-bono legal advice">
+        <div class="row row--between" style="align-items:flex-start">
+          <div>
+            <div class="row" style="gap:6px"><span class="icon icon--18 icon--fill accent" aria-hidden="true">balance</span><h2 class="t-title">Stree Mukti Legal Aid Cell</h2></div>
+            <span class="t-small muted">High Court Registered Advocates • Non-Profit Cell</span>
+          </div>
+          <span class="badge badge--fixed t-caps shrink-0">Pro-Bono Panel</span>
+        </div>
+        <div class="verified-line"><span class="t-caps subtle">Verified 3 days ago</span><span class="sep"></span><span class="t-caps accent">100% Free Service</span></div>
+        <ul class="checklist">
+          <li><span class="icon icon--16" aria-hidden="true">check_box</span><span class="t-small">Free legal representation in court</span></li>
+          <li><span class="icon icon--16" aria-hidden="true">check_box</span><span class="t-small">Non-judgmental, trauma-informed consultation</span></li>
+          <li><span class="icon icon--16" aria-hidden="true">check_box</span><span class="t-small">DV Act petitions &amp; protection order filing</span></li>
+        </ul>
+        <button class="btn btn--lg btn--primary t-label-lg" type="button" data-action="book" data-name="Stree Mukti Legal Aid Cell"><span class="icon icon--18" aria-hidden="true">calendar_month</span>Book Anonymous Consultation</button>
+      </article>
+
+      <!-- Aasra -->
+      <article class="card service" data-tags="247 free" data-search="aasra mental health trauma helpline counselling crisis counselors multilingual live call">
+        <div class="row row--between" style="align-items:flex-start">
+          <div>
+            <div class="row" style="gap:6px"><span class="icon icon--18 icon--fill accent" aria-hidden="true">support_agent</span><h2 class="t-title">Aasra 24x7 Mental Health &amp; Trauma Helpline</h2></div>
+            <span class="t-small muted">National Certified Crisis Intervention Counselors</span>
+          </div>
+          <span class="badge badge--solid t-caps shrink-0">Toll-Free Helpline</span>
+        </div>
+        <div class="verified-line"><span class="dot dot--lg pulse" style="background:var(--secondary-fixed-dim)"></span><span class="t-caps accent">Live Call Service | Zero Wait Time</span></div>
+        <div class="tag-list"><span class="tag t-caps">Multilingual (Hindi, Eng, 8 regional)</span><span class="tag t-caps">Trauma-informed</span><span class="tag t-caps">Instant Connect</span><span class="tag t-caps">No Sign-in Needed</span></div>
+        <div class="grid-2 pt-xs">
+          <a class="btn btn--lg btn--container t-label-lg" href="tel:919820466726"><span class="icon icon--18" aria-hidden="true">phone_in_talk</span>Call Now</a>
+          <button class="btn btn--lg btn--soft t-label-lg" type="button" data-action="chat" data-name="Aasra"><span class="icon icon--18 accent" aria-hidden="true">forum</span>Silent Web Chat</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="card card--muted" id="no-results" hidden>
+      <p class="t-label-lg">No matching services found</p>
+      <p class="t-small muted">Try fewer words, or call the 181 helpline — they can find the right service for you.</p>
+    </div>
+
+    <section class="card card--muted">
+      <div class="row" style="gap:4px"><span class="icon icon--fill accent" aria-hidden="true">workspace_premium</span><span class="t-label-lg">SAATHI Trust &amp; Verification Protocol</span></div>
+      <p class="t-small muted">How SAATHI verifies providers: Quarterly on-site audits &amp; continuous availability checks. Every partner organization signs a binding non-disclosure charter ensuring distress encounters remain strictly safe, discreet, and unmonitored.</p>
+      <div class="row row--between pt-xs subtle"><span class="t-caps">Protocol ref: SAATHI-AUDIT-2024Q3</span><span class="t-caps accent">100% Non-Disclosure</span></div>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <div class="bottom-nav__inner">
+      <a class="nav-link" href="index.html"><span class="icon icon--24" aria-hidden="true">shield</span><span class="t-label">Assist</span></a>
+      <a class="nav-link" href="services.html" aria-current="page"><span class="icon icon--24" aria-hidden="true">volunteer_activism</span><span class="t-label">Services</span></a>
+      <a class="nav-link" href="report.html"><span class="icon icon--24" aria-hidden="true">flag</span><span class="t-label">Report</span></a>
+      <a class="nav-link" href="private.html"><span class="icon icon--24" aria-hidden="true">lock</span><span class="t-label">Private</span></a>
+    </div>
+  </nav>
+
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f9ff">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SAATHI – Assist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header__inner">
+      <div class="brand">
+        <div class="brand__logo"><span class="icon" aria-hidden="true">verified_user</span></div>
+        <div class="brand__text">
+          <span class="brand__name t-caps">SAATHI</span>
+          <span class="brand__page t-title">Assist</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="pill-btn pill-btn--sos" href="tel:181" aria-label="Call 181 helpline">
+          <span class="icon icon--16" aria-hidden="true">emergency</span><span class="t-caps">181 SOS</span>
+        </a>
+        <a class="pill-btn" href="login.html" aria-label="Sign in" style="background:var(--surface-container-high);color:var(--on-surface)">
+          <span class="icon icon--16" aria-hidden="true">person</span><span class="t-label">Sign In</span>
+        </a>
+        <button class="pill-btn pill-btn--exit" type="button" data-quick-exit title="Leave this site immediately (or press Esc 3 times)">
+          <span class="icon icon--16" aria-hidden="true">power_settings_new</span><span class="t-label">Quick Exit</span>
+        </button>
+        <div class="avatar" aria-hidden="true"><span class="icon icon--18">person</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+
+    <!-- Reassurance -->
+    <section class="card card--tint" aria-labelledby="safe-title">
+      <div class="row row--between">
+        <div class="row" style="gap:4px">
+          <span class="icon icon--fill accent" aria-hidden="true">shield_with_heart</span>
+          <h1 class="t-title" id="safe-title" data-i18n="safe_title">You are safe here</h1>
+        </div>
+        <span class="badge t-caps"><span class="dot pulse"></span>Private Session</span>
+      </div>
+      <p class="t-small muted" data-i18n="safe_body">No browsing trace, search history, or personal identifiers are saved on this device. You can leave anytime using the Exit button.</p>
+    </section>
+
+    <!-- Language -->
+    <section class="stack-xs" aria-labelledby="lang-label">
+      <span class="t-caps muted" id="lang-label">Preferred Language / भाषा चयन</span>
+      <div class="scroll-x" role="group" aria-labelledby="lang-label">
+        <button class="chip t-label" type="button" data-lang="en" aria-pressed="true">English</button>
+        <button class="chip t-label" type="button" data-lang="hi" aria-pressed="false">हिंदी (Hindi)</button>
+        <button class="chip t-label" type="button" data-lang="bn" aria-pressed="false">বাংলা (Bengali)</button>
+        <button class="chip t-label" type="button" data-lang="ta" aria-pressed="false">தமிழ் (Tamil)</button>
+      </div>
+    </section>
+
+    <!-- Emergency dial -->
+    <section class="section" aria-labelledby="dial-title">
+      <div class="section__head">
+        <div class="section__title">
+          <span class="icon" style="color:var(--primary)" aria-hidden="true">phone_in_talk</span>
+          <h2 class="t-title" id="dial-title" data-i18n="dial_title">Emergency Direct Dial</h2>
+        </div>
+        <span class="badge t-caps"><span class="icon icon--12 accent" aria-hidden="true">wifi_off</span>Offline Ready</span>
+      </div>
+      <p class="t-small muted">Works without cellular data or Wi-Fi (Direct cellular network dial)</p>
+
+      <article class="card card--sos">
+        <div class="row row--between" style="align-items:flex-start">
+          <div class="row min-0">
+            <div class="icon-circle icon-circle--lg icon-circle--sos"><span class="icon icon--24" aria-hidden="true">local_police</span></div>
+            <div class="stack-xs min-0" style="gap:0">
+              <div class="row row--wrap" style="gap:4px">
+                <h3 class="t-title" style="font-weight:700">112 Police / SOS</h3>
+                <span class="badge badge--red t-caps pulse">Urgent</span>
+              </div>
+              <span class="t-label danger" style="font-weight:600">Expedited GPS Dispatch · Priority Response</span>
+            </div>
+          </div>
+          <a class="btn btn--call btn--call-sos t-label-lg" href="tel:112"><span class="icon icon--18" aria-hidden="true">call</span>Call 112</a>
+        </div>
+        <p class="t-small muted">Immediate police, ambulance, and fire dispatch. Automatically transmits cell-tower emergency coordinates.</p>
+      </article>
+
+      <article class="card">
+        <div class="row row--between" style="align-items:flex-start">
+          <div class="row min-0">
+            <div class="icon-circle icon-circle--lg icon-circle--soft-red"><span class="icon" aria-hidden="true">support_agent</span></div>
+            <div class="stack-xs min-0" style="gap:0">
+              <div class="row row--wrap" style="gap:4px">
+                <h3 class="t-title">181 Women Helpline</h3>
+                <span class="tag t-caps">24/7 Toll-Free</span>
+              </div>
+              <span class="t-label accent" style="font-weight:600">Instant Answer · Hindi / Eng / Regional</span>
+            </div>
+          </div>
+          <a class="btn btn--call btn--call-primary t-label-lg" href="tel:181"><span class="icon icon--18" aria-hidden="true">call</span>Call 181</a>
+        </div>
+        <p class="t-small muted">Confidential round-the-clock state crisis counseling, harassment intervention, and rapid rescue mobilization.</p>
+      </article>
+
+      <article class="card">
+        <div class="row row--between" style="align-items:flex-start">
+          <div class="row min-0">
+            <div class="icon-circle icon-circle--lg icon-circle--teal"><span class="icon icon--fill" aria-hidden="true">medical_services</span></div>
+            <div class="stack-xs min-0" style="gap:0">
+              <div class="row row--wrap" style="gap:4px">
+                <h3 class="t-title">Sakhi One Stop Centre</h3>
+                <span class="badge badge--square t-caps">Crisis &amp; Shelter</span>
+              </div>
+              <span class="t-label accent" style="font-weight:600">Direct Link to Local Protection Officer</span>
+            </div>
+          </div>
+          <a class="btn btn--call btn--call-teal t-label-lg" href="tel:181"><span class="icon icon--18" aria-hidden="true">call</span>Call Sakhi</a>
+        </div>
+        <p class="t-small muted">Integrated medical care, court legal aid, temporary safe shelter, and trauma counseling under one roof.</p>
+      </article>
+    </section>
+
+    <!-- Triage -->
+    <section class="section" aria-labelledby="support-title">
+      <div>
+        <h2 class="t-title" id="support-title" data-i18n="support_title">How can SAATHI support you today?</h2>
+        <p class="t-small muted mt-xs" data-i18n="support_sub">Select a category below. Every step is guided gently and confidential.</p>
+      </div>
+      <a class="option-card" href="services.html?need=emergency">
+        <div class="row row--between">
+          <div class="row" style="gap:4px">
+            <div class="icon-circle icon-circle--sm icon-circle--urgent"><span class="icon icon--18" aria-hidden="true">e911_emergency</span></div>
+            <span class="t-label-lg">Emergency Assistance</span>
+          </div>
+          <span class="badge badge--urgent t-caps">Urgent</span>
+        </div>
+        <p class="t-small muted">Immediate dispatch, live relay to guardians, swift shelter coordination.</p>
+      </a>
+      <a class="option-card" href="services.html">
+        <div class="row row--between">
+          <div class="row" style="gap:4px">
+            <div class="icon-circle icon-circle--sm icon-circle--teal"><span class="icon icon--18" aria-hidden="true">sentiment_satisfied</span></div>
+            <span class="t-label-lg">Confidential Support</span>
+          </div>
+          <span class="icon subtle" aria-hidden="true">chevron_right</span>
+        </div>
+        <p class="t-small muted">Free trauma counsellors, no-fee legal advocates, empathetic triage.</p>
+      </a>
+      <a class="option-card" href="report.html">
+        <div class="row row--between">
+          <div class="row" style="gap:4px">
+            <div class="icon-circle icon-circle--sm"><span class="icon icon--18" aria-hidden="true">notification_important</span></div>
+            <span class="t-label-lg">Report Public Hazard</span>
+          </div>
+          <span class="icon subtle" aria-hidden="true">chevron_right</span>
+        </div>
+        <p class="t-small muted">Discreet hazard reporting, unlit streets, dark alley warnings, harassment logs.</p>
+      </a>
+      <a class="option-card" href="private.html">
+        <div class="row row--between">
+          <div class="row" style="gap:4px">
+            <div class="icon-circle icon-circle--sm"><span class="icon icon--18" aria-hidden="true">verified_user</span></div>
+            <span class="t-label-lg">Private Advisory &amp; Log</span>
+          </div>
+          <span class="icon subtle" aria-hidden="true">chevron_right</span>
+        </div>
+        <p class="t-small muted">Independent guidance, secure records &amp; self-advocacy without police pressure.</p>
+      </a>
+    </section>
+
+    <!-- Nearby safe space -->
+    <section class="section" aria-labelledby="nearby-title">
+      <div class="section__head">
+        <div class="section__title">
+          <span class="icon icon--fill accent" aria-hidden="true">location_on</span>
+          <h2 class="t-title" id="nearby-title" data-i18n="nearby_title">Nearby Safe Space</h2>
+        </div>
+        <span class="t-label accent" style="font-weight:600">1.2 km away</span>
+      </div>
+      <article class="card card--flush">
+        <div class="media">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9oqbtbQglXKhaVgei-7EN8IrH3t6SGjOIby80PMfmjbkBToywyaqgOziXHmL-iUvdyOZPWZavF5cMxfKxXxHh6KmdYN3C8zJ9rZL3GDjqzslpmXxaFvLZbHIG-XU5ETmZkfo_iJgcXjAg1WHIJDB4abtmUBF-0rW51esDfLPA6I9JRN2MR6tkEa8GiNi8s5D4gZuSu8wvXGust5eQGmC8I4l81QVsgU1FnusJOVGdqhyGJiqpa1YM" alt="Well-lit metro concourse with a staffed assistance desk" loading="lazy" onerror="this.remove()">
+          <span class="media__tl badge badge--solid t-caps" style="padding:2px 8px"><span class="dot dot--white pulse"></span>Open 24/7</span>
+          <span class="media__br glass-dark badge t-caps"><span class="icon icon--14" style="color:var(--secondary-fixed)" aria-hidden="true">verified</span>Verified 2 hrs ago by field team</span>
+        </div>
+        <div class="card__body">
+          <div>
+            <h3 class="t-title">Aasha Haven &amp; 24/7 Care Desk</h3>
+            <p class="t-small muted mt-xs">Sector 4 Metro Concourse, Gate 2. Staffed by female safety officers, equipped with phone charging and private rooms.</p>
+          </div>
+          <div class="row" style="gap:4px">
+            <a class="btn btn--soft t-label-lg grow" style="min-height:46px;border-radius:var(--radius);color:var(--primary)" href="tel:0112345678"><span class="icon icon--18" aria-hidden="true">call</span>Call Desk</a>
+            <a class="btn btn--primary t-label-lg grow" style="min-height:46px;border-radius:var(--radius)" href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><span class="icon icon--18" aria-hidden="true">near_me</span>Directions</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="row" style="justify-content:center;text-align:center;gap:4px">
+      <span class="icon icon--18 accent" aria-hidden="true">favorite</span>
+      <p class="t-small muted" data-i18n="never_alone">You are never alone. Confidential peer listening is always free.</p>
+    </footer>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <div class="bottom-nav__inner">
+      <a class="nav-link" href="index.html" aria-current="page"><span class="icon icon--24" aria-hidden="true">shield</span><span class="t-label">Assist</span></a>
+      <a class="nav-link" href="services.html"><span class="icon icon--24" aria-hidden="true">volunteer_activism</span><span class="t-label">Services</span></a>
+      <a class="nav-link" href="report.html"><span class="icon icon--24" aria-hidden="true">flag</span><span class="t-label">Report</span></a>
+      <a class="nav-link" href="private.html"><span class="icon icon--24" aria-hidden="true">lock</span><span class="t-label">Private</span></a>
+    </div>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

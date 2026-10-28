@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'primary-fixed-dim': '#a6ccde', 'on-tertiary-container': '#ff6c7a', 'secondary-fixed': '#89f5e7', 'background': '#f8f9ff', 'on-secondary': '#ffffff', 'primary': '#00222d', 'surface': '#f8f9ff', 'on-tertiary-fixed-variant': '#920028', 'on-surface-variant': '#41484b', 'secondary-container': '#86f2e4', 'surface-bright': '#f8f9ff', 'surface-container-highest': '#d3e4fe', 'error-container': '#ffdad6', 'outline': '#71787c', 'tertiary-fixed': '#ffdada', 'surface-container-high': '#dce9ff', 'on-background': '#0b1c30', 'on-secondary-container': '#006f66', 'on-error-container': '#93000a', 'surface-variant': '#d3e4fe', 'on-secondary-fixed': '#00201d', 'on-primary-fixed': '#001f29', 'inverse-on-surface': '#eaf1ff', 'surface-container': '#e5eeff', 'surface-container-low': '#eff4ff', 'tertiary-fixed-dim': '#ffb3b6', 'tertiary-container': '#6e001c', 'secondary-fixed-dim': '#6bd8cb', 'secondary': '#006a61', 'error': '#ba1a1a', 'on-error': '#ffffff', 'primary-fixed': '#c2e8fa', 'on-primary': '#ffffff', 'outline-variant': '#c1c7cb', 'surface-container-lowest': '#ffffff', 'inverse-primary': '#a6ccde', 'on-tertiary': '#ffffff', 'surface-tint': '#3f6372', 'on-tertiary-fixed': '#40000c', 'primary-container': '#0f3846', 'on-surface': '#0b1c30', 'tertiary': '#46000e', 'surface-dim': '#cbdbf5', 'on-secondary-fixed-variant': '#005049', 'on-primary-container': '#7ca1b2', 'inverse-surface': '#213145', 'on-primary-fixed-variant': '#264b5a' }, borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' }, spacing: { 'space-sm': '0.5rem', 'margin-mobile': '1rem', 'space-md': '1rem', 'gutter': '1rem', 'margin': '1.25rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'gutter-mobile': '0.75rem', 'space-xl': '2.25rem' }, fontFamily: { 'display-hero': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'label-caps': ['Plus Jakarta Sans'], 'display-hero-mobile': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'] }, fontSize: { 'display-hero': ['36px', { lineHeight: '44px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-sm': ['17px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '400' }], 'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0em', fontWeight: '400' }], 'label-caps': ['11px', { lineHeight: '14px', letterSpacing: '0.06em', fontWeight: '700' }], 'display-hero-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-lg-mobile': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-md': ['20px', { lineHeight: '28px', letterSpacing: '0em', fontWeight: '600' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0em', fontWeight: '400' }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">verified_user</span></div><div class="flex flex-col min-w-0"><span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider leading-none">SAATHI</span><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Report</span></div></div><div class="flex items-center gap-space-xs shrink-0"><a class="min-h-[44px] px-space-sm py-space-xs rounded-full bg-error-container text-on-error-container flex items-center gap-space-xs hover:bg-error/20 active:scale-95 transition-all" href="tel:181"><span class="material-symbols-outlined text-[16px] text-error">emergency</span><span class="font-label-caps text-label-caps font-bold">181 SOS</span></a><button class="min-h-[44px] px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant flex items-center gap-space-xs hover:bg-surface-container-highest active:scale-95 transition-all" onclick="window.location.href='https://www.google.com';" title="Discreetly exit"><span class="material-symbols-outlined text-[16px]">power_settings_new</span><span class="font-label-md text-label-md">Quick Exit</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full px-margin-mobile space-y-space-md">
+<!-- Top Privacy Micro-Banner -->
+<div class="flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-full bg-secondary-container/40 text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield_lock</span>
+<span class="font-label-caps text-label-caps tracking-wider uppercase">Zero Personal Data Stored • Anonymous by Default</span>
+</div>
+<!-- Narrative & Header -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Civic Accountability</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Community Safety &amp; Hazard Reporting</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Help make public streets and communal spaces safer. Report physical hazards like unlit roads, blocked paths, or harassment hotspots. Reports are reviewed and aggregated for municipal action.
+    </p>
+</div>
+<!-- Section 1: Report Category Selection Grid -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface">Report Category</label>
+<span class="font-label-md text-label-md text-on-surface-variant">Select one or more</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter-mobile" id="category-grid">
+<!-- Item 1 (Selected) -->
+<button class="category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-primary-container text-on-primary shadow-sm" data-selected="true" type="button">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">light_off</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed check-icon" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Unlit / Broken Streetlight</span>
+<span class="font-label-caps text-label-caps text-on-primary-container mt-1">High municipal triage</span>
+</button>
+<!-- Item 2 -->
+<button class="category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-surface-container-low text-on-surface hover:bg-surface-container" data-selected="false" type="button">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">fence</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline check-icon opacity-0">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Obstructed Footpath</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Debris, stalls, dug-up</span>
+</button>
+<!-- Item 3 -->
+<button class="category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-surface-container-low text-on-surface hover:bg-surface-container" data-selected="false" type="button">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">night_shelter</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline check-icon opacity-0">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Isolated / Deserted Spot</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">No footfall corridor</span>
+</button>
+<!-- Item 4 -->
+<button class="category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-surface-container-low text-on-surface hover:bg-surface-container" data-selected="false" type="button">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container/60 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-error">warning</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline check-icon opacity-0">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Harassment Concern</span>
+<span class="font-label-caps text-label-caps text-error mt-1">Loitering / Eve-teasing</span>
+</button>
+<!-- Item 5 -->
+<button class="category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-surface-container-low text-on-surface hover:bg-surface-container" data-selected="false" type="button">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">videocam_off</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline check-icon opacity-0">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Broken CCTV / Call Box</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Safety infra down</span>
+</button>
+<!-- Item 6 -->
+<button class="category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-surface-container-low text-on-surface hover:bg-surface-container" data-selected="false" type="button">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">category</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline check-icon opacity-0">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Other Public Space Issue</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Custom description</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Upload Photo Evidence -->
+<div class="flex flex-col space-y-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Upload Photo Evidence</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">Recommended</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Helps municipal authorities verify and locate the issue swiftly (Max 15MB, PNG/JPG).
+    </p>
+<!-- Upload CTA Buttons -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="min-h-[48px] rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-space-xs active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">photo_camera</span>
+<span class="font-label-lg text-label-lg">Take Photo</span>
+</button>
+<button class="min-h-[48px] rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-space-xs active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">photo_library</span>
+<span class="font-label-lg text-label-lg">Choose Gallery</span>
+</button>
+</div>
+<!-- Uploaded Thumbnail Card -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Clear photographic evidence of an unlit overhead sodium streetlight standing deactivated alongside a dim concrete pedestrian pavement in Bengaluru city during twilight, urban safety audit aesthetic, realistic muted tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-zKZcWHy-uD_YGXPbJ5-d3NNQMl9S6Agerm8_yQNwQ8YDLoRGxTQvyL5sApyO45MK-vZs-GMPq_Zc9NeTdZx-ynJmuKQFdV07nHdmJYxe6A39Gy3kx08pnL-0ZYzcuy1MkzhMPEJzGtJKtPyZ2fP4u3kPN1yJzn9ABAQgB9P751j1cw474e-vp9HHBXivKugJzgadGYNMT7xfWdaJAw8mU2Aiz5ZM3uFJSL66IgbCE9jwalWE0vId"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">streetlight_hazard_IMG_2044.jpg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2.4 MB • Encrypted transfer</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-highest flex items-center justify-center text-on-surface-variant shrink-0 active:scale-90 transition-all" title="Remove attachment" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Security Callout -->
+<div class="flex items-center gap-space-xs pt-space-xs text-secondary">
+<span class="material-symbols-outlined text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-secondary-container">Metadata &amp; EXIF data scrubbed automatically for your privacy</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Hazard Location -->
+<div class="flex flex-col space-y-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hazard Location</span>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps">GPS Active</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Adjust Pin
+      </button>
+</div>
+<!-- Location Address Bar -->
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Near Metro Station Pillar #42, MG Road</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru, KA • Accuracy ±4m</span>
+</div>
+</div>
+<!-- Map Snippet -->
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center" data-location="MG Road Metro Station, Bengaluru, Karnataka, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJhOHQyDxX1EXsYoz9H2aw46rRK5APTw_MqRq3mj2Hd1KCLIEsFSZkLoilNUUHmp74mjH_iGEbae3iiaK0_b1MmbJJNYT-SD7B2jMgxfWiWjInmQr8Uks1i6TBX4dhzG1hZ_E_XmTFHFh_dhaJcFU_jVvSJVvw1sCnunGKKcYs_IPMJ3WmuBZtILIkLl_eRYnvqnqm1q2BuNqxoF7VhhAloSsz1ElG9N8v2DJk_YV4VWxzYZ1F5fkX')"></div>
+<!-- Center Pin Graphic -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="relative flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-secondary-fixed flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary/40 -mt-1 blur-[1px]"></div>
+</div>
+</div>
+<!-- Map micro-overlay pill -->
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">explore</span>
+<span class="font-label-caps text-label-caps text-on-surface">Pillar 42 South Sidewalk</span>
+</div>
+</div>
+<!-- Landmark Input -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Specific landmark or reference point</label>
+<div class="relative w-full">
+<input class="w-full min-h-[48px] px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all placeholder:text-outline" placeholder="e.g. Opposite Tea Stall, unlit passage behind bus stand" type="text" value="Corner opposite 24/7 Chemist, unlit stretch approx 60m"/>
+</div>
+</div>
+<!-- Time Observed Segmented Toggle -->
+<div class="flex flex-col space-y-1 pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">When did you observe this?</label>
+<div class="grid grid-cols-3 gap-1 p-1 bg-surface-container-high rounded-lg" id="time-toggle">
+<button class="time-btn py-space-xs rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm font-semibold transition-all" data-value="now" type="button">Just now</button>
+<button class="time-btn py-space-xs rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-value="tonight" type="button">Earlier tonight</button>
+<button class="time-btn py-space-xs rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-value="recurring" type="button">Recurring</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Urgency Classification -->
+<div class="flex flex-col space-y-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface">Urgency Level</label>
+<span class="font-label-md text-label-md text-on-surface-variant">Sets escalation protocol</span>
+</div>
+<div class="grid grid-cols-1 gap-space-xs" id="urgency-selector">
+<!-- Standard Queue Card -->
+<div class="urgency-card p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm cursor-pointer transition-all" data-urgency="standard" onclick="selectUrgency(this)">
+<div class="w-5 h-5 rounded-full mt-0.5 bg-surface-container-highest flex items-center justify-center shrink-0 check-indicator">
+<div class="w-2.5 h-2.5 rounded-full bg-outline hidden active-dot"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Civic Maintenance</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps">24-48h queue</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            Scheduled repairs, routine bulb replacement, municipal public works department ticket.
+          </p>
+</div>
+</div>
+<!-- Expedited Danger Card (Selected) -->
+<div class="urgency-card p-space-sm rounded-lg bg-primary-container text-on-primary flex items-start gap-space-sm cursor-pointer transition-all shadow-sm" data-urgency="danger" onclick="selectUrgency(this)">
+<div class="w-5 h-5 rounded-full mt-0.5 bg-secondary-fixed flex items-center justify-center shrink-0 check-indicator">
+<div class="w-2 h-2 rounded-full bg-primary-container active-dot"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-white font-semibold">Public Danger</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps">Expedited dispatch flag</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed leading-snug mt-0.5">
+            Actively unsafe pedestrian crossing, predator blindspot, or zero light on late night commute routes.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Privacy & Notification Controls -->
+<div class="flex flex-col space-y-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="font-headline-sm text-headline-sm text-on-surface">Privacy &amp; Dispatch Options</div>
+<!-- Anonymous Checkbox (Checked) -->
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<div class="relative mt-0.5 shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-5 h-5 rounded-md bg-secondary flex items-center justify-center text-on-secondary shadow-sm transition-all peer-checked:bg-secondary peer-unchecked:bg-surface-container-highest">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Submit 100% Anonymously</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No user identifiers, device credentials, or phone number attached to this civic safety record.</span>
+</div>
+</label>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Notify Discreetly Checkbox -->
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<div class="relative mt-0.5 shrink-0">
+<input class="sr-only peer" id="notify-check" onchange="toggleNotify(this)" type="checkbox"/>
+<div class="w-5 h-5 rounded-md bg-surface-container-highest flex items-center justify-center text-on-secondary transition-all" id="notify-box">
+<span class="material-symbols-outlined text-[16px] opacity-0" id="notify-icon">check</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Notify me discreetly when repaired</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">In-app push notification only. No SMS or external trail left on your device.</span>
+</div>
+</label>
+</div>
+<!-- Primary Action Stack -->
+<div class="flex flex-col space-y-space-xs pt-space-xs">
+<button class="w-full min-h-[52px] rounded-2xl bg-primary text-on-primary flex items-center justify-center gap-space-sm shadow-md active:scale-98 transition-all hover:bg-primary-container" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">send</span>
+<span class="font-label-lg text-label-lg font-bold">Submit Hazard Report</span>
+</button>
+<button class="w-full min-h-[48px] rounded-2xl bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center gap-space-xs active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+<span class="font-label-lg text-label-lg font-medium">Save Draft to Offline Vault</span>
+</button>
+</div>
+<!-- Emergency Escalation Warning Footer Banner -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-error-container text-on-error-container shadow-sm">
+<div class="w-9 h-9 rounded-full bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">e911_emergency</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-error-container">In immediate personal danger?</span>
+<p class="font-body-sm text-body-sm leading-tight text-on-error-container">
+        Do not wait on civic reports. Reach emergency care:
+        <a class="font-bold underline ml-1 inline-flex items-center gap-0.5" href="tel:112">Call 112 <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>
+</p>
+</div>
+</div>
+</div>
+<script>
+  // Category Grid Multi-Select micro-behavior
+  document.querySelectorAll('#category-grid .category-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const isSelected = chip.getAttribute('data-selected') === 'true';
+      const checkIcon = chip.querySelector('.check-icon');
+      
+      if (isSelected) {
+        chip.setAttribute('data-selected', 'false');
+        chip.className = 'category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-surface-container-low text-on-surface hover:bg-surface-container';
+        if (checkIcon) checkIcon.classList.add('opacity-0');
+      } else {
+        chip.setAttribute('data-selected', 'true');
+        chip.className = 'category-chip flex flex-col p-space-sm rounded-xl text-left transition-all active:scale-95 bg-primary-container text-on-primary shadow-sm';
+        if (checkIcon) checkIcon.classList.remove('opacity-0');
+      }
+    });
+  });
+
+  // Time observed pill selector
+  document.querySelectorAll('#time-toggle .time-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#time-toggle .time-btn').forEach(b => {
+        b.className = 'time-btn py-space-xs rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+      });
+      btn.className = 'time-btn py-space-xs rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm font-semibold transition-all';
+    });
+  });
+
+  // Urgency classification radio handler
+  function selectUrgency(element) {
+    const cards = document.querySelectorAll('#urgency-selector .urgency-card');
+    cards.forEach(card => {
+      if (card === element) {
+        card.className = 'urgency-card p-space-sm rounded-lg bg-primary-container text-on-primary flex items-start gap-space-sm cursor-pointer transition-all shadow-sm';
+        const indicator = card.querySelector('.check-indicator');
+        indicator.className = 'w-5 h-5 rounded-full mt-0.5 bg-secondary-fixed flex items-center justify-center shrink-0 check-indicator';
+        const dot = card.querySelector('.active-dot');
+        dot.className = 'w-2 h-2 rounded-full bg-primary-container active-dot';
+      } else {
+        card.className = 'urgency-card p-space-sm rounded-lg bg-surface-container-low text-on-surface flex items-start gap-space-sm cursor-pointer transition-all';
+        const indicator = card.querySelector('.check-indicator');
+        indicator.className = 'w-5 h-5 rounded-full mt-0.5 bg-surface-container-highest flex items-center justify-center shrink-0 check-indicator';
+        const dot = card.querySelector('.active-dot');
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-outline hidden active-dot';
+      }
+    });
+  }
+
+  // Notify Discreetly checkbox micro-toggle
+  function toggleNotify(checkbox) {
+    const box = document.getElementById('notify-box');
+    const icon = document.getElementById('notify-icon');
+    if (checkbox.checked) {
+      box.className = 'w-5 h-5 rounded-md bg-secondary flex items-center justify-center text-on-secondary shadow-sm transition-all';
+      icon.classList.remove('opacity-0');
+    } else {
+      box.className = 'w-5 h-5 rounded-md bg-surface-container-highest flex items-center justify-center text-on-secondary transition-all';
+      icon.classList.add('opacity-0');
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-label-lg"><div class="h-20 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="assist" href="#"><span class="material-symbols-outlined text-[24px]">shield</span><span class="font-label-md text-label-md mt-space-xs">Assist</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-[24px]">volunteer_activism</span><span class="font-label-md text-label-md mt-space-xs">Services</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-xs transition-all text-primary font-label-lg" data-path="report" href="#"><span class="material-symbols-outlined text-[24px]">flag</span><span class="font-label-md text-label-md mt-space-xs">Report</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="private" href="#"><span class="material-symbols-outlined text-[24px]">lock</span><span class="font-label-md text-label-md mt-space-xs">Private</span></a></div></nav></body></html>

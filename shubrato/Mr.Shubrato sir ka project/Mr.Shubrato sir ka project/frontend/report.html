@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f9ff">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SAATHI – Report a Hazard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header__inner">
+      <div class="brand">
+        <div class="brand__logo"><span class="icon" aria-hidden="true">verified_user</span></div>
+        <div class="brand__text">
+          <span class="brand__name t-caps">SAATHI</span>
+          <span class="brand__page t-title">Report</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="pill-btn pill-btn--sos" href="tel:181" aria-label="Call 181 helpline">
+          <span class="icon icon--16" aria-hidden="true">emergency</span><span class="t-caps">181 SOS</span>
+        </a>
+        <button class="pill-btn pill-btn--exit" type="button" data-quick-exit title="Leave this site immediately (or press Esc 3 times)">
+          <span class="icon icon--16" aria-hidden="true">power_settings_new</span><span class="t-label">Quick Exit</span>
+        </button>
+        <div class="avatar" aria-hidden="true"><span class="icon icon--18">person</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main app-main--tight">
+
+    <div class="banner banner__pill" style="display:flex">
+      <span class="icon icon--16 accent" aria-hidden="true">shield_lock</span>
+      <span class="t-caps">Zero Personal Data Stored • Anonymous by Default</span>
+    </div>
+
+    <div class="stack-xs">
+      <div class="row" style="gap:8px"><span class="dot dot--lg"></span><span class="t-caps accent">Civic Accountability</span></div>
+      <h1 class="t-headline">Community Safety &amp; Hazard Reporting</h1>
+      <p class="t-body muted">Help make public streets and communal spaces safer. Report physical hazards like unlit roads, blocked paths, or harassment hotspots. Reports are reviewed and aggregated for municipal action.</p>
+    </div>
+
+    <form id="report-form" class="stack-md" novalidate>
+      <!-- Category -->
+      <fieldset style="border:0;padding:0;margin:0" class="stack-sm">
+        <div class="row row--between"><legend class="t-title" style="padding:0">Report Category</legend><span class="t-label muted">Select one or more</span></div>
+        <div class="category-grid" id="category-grid">
+        <button class="category" type="button" data-key="streetlight" aria-pressed="true">
+          <div class="category__top">
+            <span class="category__icon"><span class="icon icon--18" aria-hidden="true">light_off</span></span>
+            <span class="icon icon--18 category__check" aria-hidden="true">check_circle</span>
+          </div>
+          <span class="t-label-lg" style="line-height:1.25">Unlit / Broken Streetlight</span>
+          <span class="t-caps category__hint">High municipal triage</span>
+        </button>
+        <button class="category" type="button" data-key="footpath" aria-pressed="false">
+          <div class="category__top">
+            <span class="category__icon"><span class="icon icon--18" aria-hidden="true">fence</span></span>
+            <span class="icon icon--18 category__check" aria-hidden="true">check_circle</span>
+          </div>
+          <span class="t-label-lg" style="line-height:1.25">Obstructed Footpath</span>
+          <span class="t-caps category__hint">Debris, stalls, dug-up</span>
+        </button>
+        <button class="category" type="button" data-key="isolated" aria-pressed="false">
+          <div class="category__top">
+            <span class="category__icon"><span class="icon icon--18" aria-hidden="true">night_shelter</span></span>
+            <span class="icon icon--18 category__check" aria-hidden="true">check_circle</span>
+          </div>
+          <span class="t-label-lg" style="line-height:1.25">Isolated / Deserted Spot</span>
+          <span class="t-caps category__hint">No footfall corridor</span>
+        </button>
+        <button class="category" type="button" data-key="harassment" aria-pressed="false">
+          <div class="category__top">
+            <span class="category__icon category__icon--alert"><span class="icon icon--18" aria-hidden="true">warning</span></span>
+            <span class="icon icon--18 category__check" aria-hidden="true">check_circle</span>
+          </div>
+          <span class="t-label-lg" style="line-height:1.25">Harassment Concern</span>
+          <span class="t-caps category__hint category__hint--alert">Loitering / Eve-teasing</span>
+        </button>
+        <button class="category" type="button" data-key="cctv" aria-pressed="false">
+          <div class="category__top">
+            <span class="category__icon"><span class="icon icon--18" aria-hidden="true">videocam_off</span></span>
+            <span class="icon icon--18 category__check" aria-hidden="true">check_circle</span>
+          </div>
+          <span class="t-label-lg" style="line-height:1.25">Broken CCTV / Call Box</span>
+          <span class="t-caps category__hint">Safety infra down</span>
+        </button>
+        <button class="category" type="button" data-key="other" aria-pressed="false">
+          <div class="category__top">
+            <span class="category__icon"><span class="icon icon--18" aria-hidden="true">category</span></span>
+            <span class="icon icon--18 category__check" aria-hidden="true">check_circle</span>
+          </div>
+          <span class="t-label-lg" style="line-height:1.25">Other Public Space Issue</span>
+          <span class="t-caps category__hint">Custom description</span>
+        </button>
+        </div>
+        <p class="t-small danger" id="category-error" role="alert" hidden>Please choose at least one category.</p>
+      </fieldset>
+
+      <!-- Photo -->
+      <section class="card">
+        <div class="row" style="gap:4px"><h2 class="t-title">Upload Photo Evidence</h2><span class="badge t-caps">Recommended</span></div>
+        <p class="t-small muted">Helps municipal authorities verify and locate the issue swiftly (Max 15MB, PNG/JPG).</p>
+        <div class="grid-2 pt-xs">
+          <button class="btn btn--soft t-label-lg" style="border-radius:var(--radius)" type="button" id="btn-camera"><span class="icon accent" aria-hidden="true">photo_camera</span>Take Photo</button>
+          <button class="btn btn--soft t-label-lg" style="border-radius:var(--radius)" type="button" id="btn-gallery"><span class="icon" aria-hidden="true">photo_library</span>Choose Gallery</button>
+        </div>
+        <input class="sr-only" type="file" id="file-camera" accept="image/png,image/jpeg" capture="environment" tabindex="-1" aria-hidden="true">
+        <input class="sr-only" type="file" id="file-gallery" accept="image/png,image/jpeg" tabindex="-1" aria-hidden="true">
+        <div class="file-row" id="file-row" data-demo-src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-zKZcWHy-uD_YGXPbJ5-d3NNQMl9S6Agerm8_yQNwQ8YDLoRGxTQvyL5sApyO45MK-vZs-GMPq_Zc9NeTdZx-ynJmuKQFdV07nHdmJYxe6A39Gy3kx08pnL-0ZYzcuy1MkzhMPEJzGtJKtPyZ2fP4u3kPN1yJzn9ABAQgB9P751j1cw474e-vp9HHBXivKugJzgadGYNMT7xfWdaJAw8mU2Aiz5ZM3uFJSL66IgbCE9jwalWE0vId">
+          <div class="row min-0">
+            <div class="thumb"><img id="file-thumb" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-zKZcWHy-uD_YGXPbJ5-d3NNQMl9S6Agerm8_yQNwQ8YDLoRGxTQvyL5sApyO45MK-vZs-GMPq_Zc9NeTdZx-ynJmuKQFdV07nHdmJYxe6A39Gy3kx08pnL-0ZYzcuy1MkzhMPEJzGtJKtPyZ2fP4u3kPN1yJzn9ABAQgB9P751j1cw474e-vp9HHBXivKugJzgadGYNMT7xfWdaJAw8mU2Aiz5ZM3uFJSL66IgbCE9jwalWE0vId" alt="Photo preview"></div>
+            <div class="min-0">
+              <div class="t-label truncate" id="file-name" style="font-weight:600">streetlight_hazard_IMG_2044.jpg</div>
+              <div class="t-small muted" id="file-meta">2.4 MB • Encrypted transfer</div>
+            </div>
+          </div>
+          <button class="icon-btn" type="button" id="file-remove" title="Remove attachment" aria-label="Remove attachment"><span class="icon icon--18" aria-hidden="true">close</span></button>
+        </div>
+        <div class="row accent" style="gap:4px"><span class="icon icon--16 icon--fill" aria-hidden="true">verified_user</span><span class="t-small" style="color:var(--on-secondary-container)">Metadata &amp; EXIF data scrubbed automatically for your privacy</span></div>
+      </section>
+
+      <!-- Location -->
+      <section class="card">
+        <div class="row row--between">
+          <div class="row" style="gap:4px"><h2 class="t-title">Hazard Location</h2><span class="badge t-caps" id="gps-badge"><span class="dot pulse"></span><span id="gps-text">GPS Active</span></span></div>
+          <button class="chip chip--sm t-label" style="background:var(--surface-container);color:var(--primary);min-height:32px" type="button" id="btn-locate">Adjust Pin</button>
+        </div>
+        <div class="location-row">
+          <span class="icon icon--fill" aria-hidden="true">location_on</span>
+          <div class="min-0"><div class="t-label-lg truncate" id="loc-title">Near Metro Station Pillar #42, MG Road</div><div class="t-small muted" id="loc-sub">Bengaluru, KA • Accuracy ±4m</div></div>
+        </div>
+        <div class="map" role="img" aria-label="Map showing the hazard location" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJhOHQyDxX1EXsYoz9H2aw46rRK5APTw_MqRq3mj2Hd1KCLIEsFSZkLoilNUUHmp74mjH_iGEbae3iiaK0_b1MmbJJNYT-SD7B2jMgxfWiWjInmQr8Uks1i6TBX4dhzG1hZ_E_XmTFHFh_dhaJcFU_jVvSJVvw1sCnunGKKcYs_IPMJ3WmuBZtILIkLl_eRYnvqnqm1q2BuNqxoF7VhhAloSsz1ElG9N8v2DJk_YV4VWxzYZ1F5fkX')">
+          <div class="map__pin"><div class="map__pin-dot"><span class="icon icon--fill" aria-hidden="true">warning</span></div></div>
+          <div class="map__label t-caps"><span class="icon icon--14 accent" aria-hidden="true">explore</span><span id="map-label">Pillar 42 South Sidewalk</span></div>
+        </div>
+        <div class="field">
+          <label class="t-label muted" for="landmark">Specific landmark or reference point</label>
+          <input class="input" id="landmark" name="landmark" type="text" maxlength="200" placeholder="e.g. Opposite Tea Stall, unlit passage behind bus stand">
+        </div>
+        <div class="field pt-xs">
+          <span class="t-label muted" id="when-label">When did you observe this?</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="when-label" id="time-toggle">
+            <button class="t-label" type="button" role="radio" data-value="now" aria-checked="true">Just now</button>
+            <button class="t-label" type="button" role="radio" data-value="tonight" aria-checked="false">Earlier tonight</button>
+            <button class="t-label" type="button" role="radio" data-value="recurring" aria-checked="false">Recurring</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Urgency -->
+      <section class="card">
+        <div class="row row--between"><h2 class="t-title">Urgency Level</h2><span class="t-label muted">Sets escalation protocol</span></div>
+        <div class="stack-xs" role="radiogroup" aria-label="Urgency level" id="urgency-selector">
+          <button class="radio-card" type="button" role="radio" data-value="standard" aria-checked="false">
+            <span class="radio-card__ring"><span class="radio-card__dot"></span></span>
+            <span class="min-0">
+              <span class="row" style="gap:4px"><span class="t-label-lg">Civic Maintenance</span><span class="tag t-caps" style="background:var(--surface-container-high)">24-48h queue</span></span>
+              <span class="t-small radio-card__desc" style="display:block">Scheduled repairs, routine bulb replacement, municipal public works department ticket.</span>
+            </span>
+          </button>
+          <button class="radio-card" type="button" role="radio" data-value="danger" aria-checked="true">
+            <span class="radio-card__ring"><span class="radio-card__dot"></span></span>
+            <span class="min-0">
+              <span class="row row--wrap" style="gap:4px"><span class="t-label-lg">Public Danger</span><span class="badge badge--urgent badge--square t-caps">Expedited dispatch flag</span></span>
+              <span class="t-small radio-card__desc" style="display:block">Actively unsafe pedestrian crossing, predator blindspot, or zero light on late night commute routes.</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Privacy -->
+      <section class="card">
+        <h2 class="t-title">Privacy &amp; Dispatch Options</h2>
+        <label class="check">
+          <input type="checkbox" id="opt-anon" checked>
+          <span class="check__box"><span class="icon icon--16" aria-hidden="true">check</span></span>
+          <span><span class="t-label-lg" style="display:block">Submit 100% Anonymously</span><span class="t-small muted">No user identifiers, device credentials, or phone number attached to this civic safety record.</span></span>
+        </label>
+        <hr class="divider">
+        <label class="check">
+          <input type="checkbox" id="opt-notify">
+          <span class="check__box"><span class="icon icon--16" aria-hidden="true">check</span></span>
+          <span><span class="t-label-lg" style="display:block">Notify me discreetly when repaired</span><span class="t-small muted">In-app push notification only. No SMS or external trail left on your device.</span></span>
+        </label>
+      </section>
+
+      <div class="stack-xs pt-xs">
+        <button class="btn btn--lg btn--primary t-label-lg" style="font-weight:700" type="submit" id="btn-submit"><span class="icon" style="color:var(--secondary-fixed)" aria-hidden="true">send</span>Submit Hazard Report</button>
+        <button class="btn btn--soft t-label-lg" style="background:var(--surface-container);color:var(--primary)" type="button" id="btn-draft"><span class="icon icon--18" aria-hidden="true">archive</span>Save Draft to Offline Vault</button>
+      </div>
+    </form>
+
+    <aside class="card card--danger" style="flex-direction:row;align-items:center;padding:var(--space-sm)">
+      <div class="icon-circle icon-circle--sm" style="background:var(--error);color:#fff;width:36px;height:36px"><span class="icon" aria-hidden="true">e911_emergency</span></div>
+      <div>
+        <div class="t-label-lg" style="font-weight:700">In immediate personal danger?</div>
+        <p class="t-small" style="line-height:1.3">Do not wait on civic reports. Reach emergency care: <a href="tel:112" style="font-weight:700;text-decoration:underline">Call 112</a></p>
+      </div>
+    </aside>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <div class="bottom-nav__inner">
+      <a class="nav-link" href="index.html"><span class="icon icon--24" aria-hidden="true">shield</span><span class="t-label">Assist</span></a>
+      <a class="nav-link" href="services.html"><span class="icon icon--24" aria-hidden="true">volunteer_activism</span><span class="t-label">Services</span></a>
+      <a class="nav-link" href="report.html" aria-current="page"><span class="icon icon--24" aria-hidden="true">flag</span><span class="t-label">Report</span></a>
+      <a class="nav-link" href="private.html"><span class="icon icon--24" aria-hidden="true">lock</span><span class="t-label">Private</span></a>
+    </div>
+  </nav>
+
+  <script src="js/app.js"></script>
+  <script src="js/report.js"></script>
+</body>
+</html>
